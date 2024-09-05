@@ -1,0 +1,243 @@
+html {
+    font-size: 62.5%;
+}
+:root {
+    --primary-color: #93B832;  
+    --secondary-color: #E0D410; 
+    --light-color: #FFF;
+    --dark-color:#000;
+    --gray-color:#E7EAEB;
+    --secondary-text-color:#99CCC4;        
+    --background-color: #00172D; 
+}
+body {
+    font-family: 'Inter', sans-serif;
+    margin:0;
+    color:var(--light-color)
+}
+* {
+    box-sizing: border-box;
+  }
+ul,li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color:var(--light-color);
+    font-size: 1.1rem;
+}
+.main-container {
+    width:1600px;
+    margin:0 auto;
+    max-width: 100%;
+}
+
+.main-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-start {
+    display: flex;
+    align-items: center;
+    gap:1%;
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:8%;
+    flex-wrap: nowrap;
+}
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:2.8rem
+}
+.info {
+    background-color: var(--background-color);
+}
+.info .banner {
+    color:var(--secondary-text-color);
+    font-size: 1.867rem;
+    font-weight: bold;
+}
+.info ul li{
+    width:30%;
+    text-align:center;
+}
+.info ul li a {
+    font-size: 1.83rem;
+    text-align: right;
+}
+.hero {
+    position: relative;
+    background-image:url(./images/woman.jpg);
+    background-size: cover;
+    width:100%;
+    height:100vh;
+    z-index: 100;
+}
+.hero::after{
+    content: "";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(to right, rgba(0, 24, 46, 1) 0%, rgba(0, 24, 46, .1) 75%);
+    z-index: -10;
+}
+header {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 500;
+    padding:.6% 0 ;
+}
+header:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+.sticky-header {
+    position: sticky;
+    background-color: rgba(255, 255, 255, 1);
+    top: 0;
+  }
+
+.position-container{
+    position:relative;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    
+}
+.nav-bar .logo{
+    padding-top: .5rem;
+    flex:1;
+    fill :var(--light-color);
+    text-align: left;
+}
+header:hover .nav-bar .logo {
+    fill:var(--dark-color);
+}
+.sticky-logo {
+    fill:var(--dark-color);
+}
+nav {
+    flex:2;
+}
+nav ul li a,p{
+    font-size: 1.85rem;
+}
+nav ul li i {
+    font-size: 1.5rem;
+}
+nav .mega-menu-content {
+    display:none; 
+    position:absolute;
+    background-color:var(--light-color);
+    width:100%;
+    top:7rem;
+    left:0;
+    color:var(--dark-color);
+    padding: 1rem 35rem;
+    border-top: .2rem solid var(--gray-color);
+    z-index: 1000;
+}
+.mega-menu:hover .mega-menu-content {
+    display:block;
+}
+.mega-menu .mega-menu-content .sub-page-preview {
+    position:absolute;
+    top:0;
+    right:0;
+    padding:1rem 35rem;
+}
+.contact {
+    flex:1;
+    gap:1rem;
+}
+.contact .search {
+    position: relative;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    color:#fff;
+    width:4.5rem;
+    height:4.5rem;
+}
+.contact .search i {
+    position:absolute;
+    top:30%;
+    left:30%;
+    width:100%;
+    font-size: 2rem;
+}
+.contact .contact-link {
+    background-color: var(--primary-color);
+    height: 4.5rem;
+    width:18rem;
+    padding: 0 5%;
+    border-radius: 5rem;
+    font-size: 1.9rem;
+    align-items: center;
+}
+.hero-content {
+    position: absolute;
+    top:25%;
+    left:7%;
+    
+}
+.hero-content h1{
+    font-size:4.9rem ;
+    margin: 0;
+}
+.hero-content span {
+    font-size:11.5rem;
+    font-weight:bold ;
+    margin: 0;
+}
+.hero-content p{
+    width:40%;
+    font-size:1.6rem
+}
+.find-more {
+    margin-top:5%;
+}
+.find-more .find-arrow {
+    position: relative;
+    background-color:var(--secondary-color);
+    border-radius: 50%;
+    color:#fff;
+    width:4.5rem;
+    height:4.5rem;
+}
+.find-more .find-arrow  i {
+    position:absolute;
+    top:30%;
+    left:30%;
+    width:100%;
+    font-size: 2rem;
+}
+.find-more h2{
+    font-size: 2.9rem;
+    margin: 0;
+}
+.bar {
+    margin-top: 15%;
+}
+.first-bar,.second-bar {
+    width:5rem;
+    height:.8rem;
+    border-radius: 1rem;
+    background-color: var(--light-color);
+}
+.second-bar{
+    z-index: -20;
+}
+
