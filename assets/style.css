@@ -7,6 +7,7 @@ html {
     --light-color: #FFF;
     --dark-color:#000;
     --gray-color:#E7EAEB;
+    --dark-gray:#2C4052;
     --secondary-text-color:#99CCC4;        
     --background-color: #00172D; 
 }
@@ -29,9 +30,9 @@ a {
     font-size: 1.1rem;
 }
 .main-container {
-    width:1600px;
+    width:95%;
     margin:0 auto;
-    max-width: 100%;
+    max-width: 1600px;
 }
 
 .main-flex {
@@ -48,7 +49,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:8%;
+    gap:4%;
     flex-wrap: nowrap;
 }
 .flex-end {
@@ -59,10 +60,11 @@ a {
 }
 .info {
     background-color: var(--background-color);
+    height:6.3rem
 }
 .info .banner {
     color:var(--secondary-text-color);
-    font-size: 1.867rem;
+    font-size: 1.87rem;
     font-weight: bold;
 }
 .info ul li{
@@ -73,14 +75,26 @@ a {
     font-size: 1.83rem;
     text-align: right;
 }
-.hero {
+.main-hero {
     position: relative;
-    background-image:url(./images/woman.jpg);
+    background-image:url(./images/photo_2024-09-05_20-34-23.jpg);
     background-size: cover;
     width:100%;
     height:100vh;
     z-index: 100;
 }
+/* .main-hero:hover {
+    display: none;
+} */
+.second-hero {
+    position: relative;
+    background-image:url(./images/photo_2024-09-05_20-34-24.jpg);
+    background-size: cover;
+    width:100%;
+    height:100vh;
+    z-index: 100;
+}
+
 .hero::after{
     content: "";
     position:absolute;
@@ -88,12 +102,11 @@ a {
     left:0;
     width:100%;
     height:100%;
-    background:linear-gradient(to right, rgba(0, 24, 46, 1) 0%, rgba(0, 24, 46, .1) 75%);
     z-index: -10;
 }
 header {
     position: absolute;
-    top:0;
+    top:9rem;
     left:0;
     width:100%;
     background-color: rgba(255, 255, 255, 0);
@@ -136,7 +149,8 @@ nav ul li a,p{
     font-size: 1.85rem;
 }
 nav ul li i {
-    font-size: 1.5rem;
+    margin-top: .5rem;
+    font-size: 1.4rem;
 }
 nav .mega-menu-content {
     display:none; 
@@ -167,7 +181,7 @@ nav .mega-menu-content {
     position: relative;
     background-color: var(--background-color);
     border-radius: 50%;
-    color:#fff;
+    color:var(--light-color);
     width:4.5rem;
     height:4.5rem;
 }
@@ -189,7 +203,7 @@ nav .mega-menu-content {
 }
 .hero-content {
     position: absolute;
-    top:25%;
+    top:29%;
     left:7%;
     
 }
@@ -198,13 +212,14 @@ nav .mega-menu-content {
     margin: 0;
 }
 .hero-content span {
-    font-size:11.5rem;
+    font-size:13.7rem;
     font-weight:bold ;
     margin: 0;
 }
 .hero-content p{
-    width:40%;
-    font-size:1.6rem
+    width:35%;
+    font-size:1.6rem;
+    margin-top: 3rem;
 }
 .find-more {
     margin-top:5%;
@@ -213,7 +228,7 @@ nav .mega-menu-content {
     position: relative;
     background-color:var(--secondary-color);
     border-radius: 50%;
-    color:#fff;
+    color:var(--light-color);
     width:4.5rem;
     height:4.5rem;
 }
@@ -225,8 +240,11 @@ nav .mega-menu-content {
     font-size: 2rem;
 }
 .find-more h2{
-    font-size: 2.9rem;
+    font-size: 2.05rem;
     margin: 0;
+    display: inline-block; 
+    border-bottom: .2rem solid var(--light-color);
+     padding-bottom: .3rem;
 }
 .bar {
     margin-top: 15%;
@@ -235,9 +253,57 @@ nav .mega-menu-content {
     width:5rem;
     height:.8rem;
     border-radius: 1rem;
+}
+.first-bar {
     background-color: var(--light-color);
 }
 .second-bar{
-    z-index: -20;
+    background-color:var(--dark-gray)
 }
 
+
+/* Responsive media queries */
+@media only screen and (max-width: 1200px) {
+    .hero-content p {
+        width: 60%;
+    }
+    .find-more h2 {
+        font-size: 2.4rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main-flex, .contact .contact-link, .find-more {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+    .hero-content span {
+        font-size: 7.5rem;
+    }
+    .hero-content p {
+        width: 80%;
+        font-size: 1.4rem;
+    }
+    .find-more h2 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content span {
+        font-size: 5.5rem;
+    }
+    .hero-content p {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+    .find-more h2 {
+        font-size: 1.8rem;
+    }
+}
