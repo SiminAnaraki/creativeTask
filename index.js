@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 const header = document.querySelector('header');
 const logo = document.querySelector('.dark-header') || document.querySelector('.logo');
 const navLinks = document.querySelectorAll('nav ul li a');
@@ -8,6 +9,7 @@ const heroBars = document.querySelectorAll('.hero-bar')
 let isMegaActive = false;
 let currentHeroItem=0;
 
+//event listener hamburger menu in small device
 document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.querySelector('.hamburger-menu');
   const hamburgerIcon = document.getElementById('hamburger-icon');
@@ -25,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
-
+//toggle header state between dark and light modes
 function toggleHeaderState(activate) {
   if (activate) {
     logo.classList.add('dark-header');
@@ -48,7 +50,7 @@ function toggleHeaderState(activate) {
     }
   }
 }
-
+//scroll event handler
 function handleScroll() {
   if (window.scrollY > 0) {
     header.classList.add('sticky-header');
@@ -58,7 +60,7 @@ function handleScroll() {
     toggleHeaderState(isMegaActive);
   }
 }
-
+//toggle mega menu visibility and state
 function toggleMegaMenu() {
   isMegaActive = !isMegaActive;
   
@@ -85,27 +87,20 @@ function toggleMegaMenu() {
   } else {
     toggleHeaderState(true);
   }
+
 }
-
-window.addEventListener('scroll', handleScroll);
-mega.addEventListener('click', toggleMegaMenu);
-
-
-
-
-
-
+// fade through hero items automatically
 function fadeHero() {
   heroItems[currentHeroItem].classList.add('invisible');
   currentHeroItem = (currentHeroItem + 1) % heroItems.length;
   heroItems[currentHeroItem].classList.remove('invisible');
 }
-
+//start hero item fade every 4 seconds
 let fadeInterval = setInterval(fadeHero, 4000);
 
 
 
-
+//manual switching between hero items
 heroBars.forEach(heroBar => {
   heroBar.addEventListener('click', function() {
       const dataIndex = heroBar.getAttribute('data-hero');
@@ -117,4 +112,10 @@ heroBars.forEach(heroBar => {
   });
 });
 
+//event Listeners
+window.addEventListener('scroll', handleScroll);
+mega.addEventListener('click', toggleMegaMenu);
+
+//initialization
 handleScroll();
+})

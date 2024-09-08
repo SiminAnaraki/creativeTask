@@ -1,3 +1,4 @@
+/* General */
 html {
     font-size: 62.5%;
 }
@@ -75,6 +76,7 @@ a {
     visibility: hidden;
     pointer-events: none; 
  }
+ /* info section */
 .info {
     background-color: var(--background-color);
     height:6rem
@@ -92,8 +94,9 @@ a {
     font-size: 1.6rem;
     text-align: right;
 }
+/* header sectin */
 header {
-    position: absolute;
+    position: fixed;
     top:7.8rem;
     left:0;
     width:100%;
@@ -103,7 +106,6 @@ header {
 }
 
 .sticky-header {
-    position: sticky;
     background-color: rgba(255, 255, 255, 1);
     top: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -112,21 +114,12 @@ header {
     background-color: rgba(255, 255, 255, 1);
 }
 
-.position-container{
-    position:relative;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    
-}
 .nav-bar .logo{
     padding-top: .5rem;
     flex:1;
     fill :var(--light-color);
     text-align: left;
 }
-
 .dark-header {
     fill:var(--dark-color);
     color:var(--dark-color);
@@ -185,12 +178,10 @@ nav .mega-content-hidden,  nav .mega-content-visible {
     z-index: 1000;
     transition: all 0.3s ease-in-out;
 }
-
 nav .mega-content-hidden {
     opacity: 0;
     visibility: hidden;
 }
-
  nav .mega-content-visible {
     opacity: 1;
     visibility: visible;
@@ -207,8 +198,7 @@ nav .mega-content-hidden {
 .mega-menu  .sub-page-preview img {
     width:25%;
     height:auto;
-    border-radius:4px;
-    
+    border-radius:4px;  
 }
 .sub-menu {
     position: relative;
@@ -273,7 +263,7 @@ nav .mega-content-hidden {
 .contact .contact-link:hover {
     background-color: rgba(146,184,50,.6)
 }
-
+/* hero sectin */
 .hero {
     position: relative;
     width:100%;
@@ -379,7 +369,7 @@ nav .mega-content-hidden {
   }
 
 
-/* Responsive media queries */
+/* responsive media queries */
 @media only screen and (max-width: 1400px){
     html {
         font-size: 58.25%;
