@@ -413,6 +413,10 @@ nav .mega-content-hidden {
     .contact .contact-link {
         display: none;
     }
+    .logo svg {
+        width: 90px;
+        height: 28px;
+    }
     .hero {
         height: 80vh;
         min-height: 400px;
@@ -429,6 +433,10 @@ nav .mega-content-hidden {
 @media screen and (max-width: 768px) {
     html {
         font-size: 43.75%; 
+    }
+    .logo svg {
+        width: 80px;
+        height: 25px;
     }
     .menu {
         display: none;
@@ -473,12 +481,21 @@ nav .mega-content-hidden {
     html {
         font-size: 37.5%; 
     }
+    .empty{
+        display:none
+    }
+    .banner{
+        text-align: left;
+    }
+    
     .hero {
         height: 60vh;
         min-height: 300px;
     }
-    
-    
+    .logo svg {
+        width: 70px;
+        height: 22px;
+    }
     .hero-content h1 {
         font-size: 3rem;
     }
@@ -490,7 +507,13 @@ nav .mega-content-hidden {
     .hero-content p {
         width: 90%;
     }
-
+    .find-more .find-arrow {
+        width:3.5rem;
+        height:3.5rem;
+    }
+    .find-more .find-arrow  i {
+        font-size: 1.5rem;
+    }
     .find-more h2 {
         font-size: 1.6rem;
     }

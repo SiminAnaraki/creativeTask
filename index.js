@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+// document.addEventListener('DOMContentLoaded', function() {
 const header = document.querySelector('header');
 const logo = document.querySelector('.dark-header') || document.querySelector('.logo');
 const navLinks = document.querySelectorAll('nav ul li a');
@@ -118,4 +118,4 @@ mega.addEventListener('click', toggleMegaMenu);
 
 //initialization
 handleScroll();
-})
+// })
